@@ -106,8 +106,8 @@ const renderProduct = (product) => {
 
     return `
         <div class="col" >
-            <div class="card">
-                <img src="${image}" height="210px" width="100%" class="object-cover" />
+            <div class="card  overflow-hidden">
+                <img src="${image}" height="210px" width="100%" class="product-item object-cover" />
                 <div class="d-flex flex-column p-3">
                     <h5>${name}</h5>
                     <p class="mb-0 fw-500">${price}</p>
