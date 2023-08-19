@@ -13,6 +13,12 @@
     <link rel="stylesheet" href="./assets/styles/rest.css">
     <link rel="icon" href="./assets/images/logoweb.png" type="image/x-icon">
     <link rel="shortcut icon" href="./assets/images/logoweb.png" type="image/x-icon">
+    <style>
+        .text {
+            line-height: 1.5;
+            font-size: 20px;
+        }
+    </style>
 </head>
 
 <body>
@@ -162,7 +168,7 @@
                 </a>
 
                 <div class="px-5 d-flex gap-3">
-                    <a class="text-decoration-none text-black fw-normal" href="">TRANG CHỦ </a>
+                    <a class="text-decoration-none text-black fw-normal" href="index.html">TRANG CHỦ </a>
                     <div class="dropdown">
                         <a class="text-decoration-none text-black fw-normal dropdown-toggle" href="#" role="button"
                             data-bs-toggle="dropdown" aria-expanded="false">
@@ -205,59 +211,77 @@
             </div>
         </div>
     </nav>
-
     <main>
-        <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel" data-bs-interval="2000">
-            <div class="banner carousel-inner">
-                <div class="carousel-item active">
-                    <img src="./assets/images/banner_1.jpg" alt="banner1">
-                </div>
-                <div class="carousel-item">
-                    <img src="./assets/images/banner_2.jpg" alt="banner2">
-                </div>
-                <div class="carousel-item">
-                    <img src="./assets/images/banner_3.jpg" alt="banner3">
-                </div>
+        <div class="row p-2 ">
+            <div class="col-md-4">
+                <img src="assets/images/sale.jpg" alt="" width="500px" class="img-fluid">
+            </div>
+            <div class="col-md-8 p-2">**KHUYẾN MÃI SỐC: GIẢM GIÁ 50% CHO MỌI SẢN PHẨM!**
 
+                <p>🎉 Chào mừng bạn đến với chương trình khuyến mãi cực kỳ hấp dẫn của chúng tôi! Bạn đã sẵn sàng để
+                    trải
+                    nghiệm sự hạnh phúc của việc mua sắm với giá ưu đãi chưa? Hãy cùng chúng tôi khám phá những điều
+                    tuyệt
+                    vời mà chúng tôi đã dành cho bạn!</p>
+
+                <p>🛍️ **50% GIẢM GIÁ CHO MỌI SẢN PHẨM**: Đã đến lúc thỏa thích mua sắm mà không lo về giá cả! Tất cả
+                    các
+                    sản phẩm đều được giảm nguyên nửa giá gốc - cơ hội không thể tốt hơn để bạn sắm sửa, cập nhật tủ đồ,
+                    hoặc chăm sóc bản thân và gia đình.</p>
+
+                <p>🎁 **SẢN PHẨM ĐA DẠNG - CHẤT LƯỢNG KHÔNG ĐỐI THỦ**: Chúng tôi tự hào mang đến cho bạn một bộ sưu tập
+                    đa
+                    dạng với hàng ngàn sản phẩm chất lượng cao từ các thương hiệu nổi tiếng. Từ thời trang, phụ kiện, đồ
+                    gia
+                    dụng cho đến mỹ phẩm và nhiều hơn nữa - bạn sẽ dễ dàng tìm thấy những sản phẩm mà mình yêu thích.
+                </p>
+
+                <p>⏰ **THỜI GIAN KHUYẾN MÃI HẠN CHẾ**: Đừng bỏ lỡ cơ hội duy nhất này! Chương trình khuyến mãi chỉ diễn
+                    ra
+                    trong thời gian giới hạn. Hãy nhanh tay đặt hàng để đảm bảo bạn không bỏ lỡ việc mua sắm với mức giá
+                    ưu
+                    đãi chưa từng thấy!</p>
+
+                <p>🚀 **MUA NGAY - TIẾT KIỆM NGAY**: Đừng để cơ hội trôi qua! Hãy truy cập website của chúng tôi ngay
+                    hôm
+                    nay để thỏa sức mua sắm và tiết kiệm đến 50% cho mỗi đơn hàng. Số lượng có hạn, nhanh tay lựa chọn
+                    những
+                    sản phẩm ưa thích của bạn!</p>
+
+                <p>📞 **LIÊN HỆ CHÚNG TÔI**: Nếu bạn có bất kỳ câu hỏi hoặc cần hỗ trợ, đừng ngần ngại liên hệ với đội
+                    ngũ
+                    chăm sóc khách hàng của chúng tôi. Chúng tôi luôn sẵn sàng giúp bạn để bạn có trải nghiệm mua sắm
+                    tốt
+                    nhất.</p>
+
+                <p>🛒 **MUA SẮM THẢ GA - KHÔNG LO VỀ GIÁ!** Hãy đảm bảo bạn đã đến đúng thời điểm để trải nghiệm ưu đãi
+                    hấp
+                    dẫn nhất trong năm. Mua sắm thông minh - tiết kiệm lớn!</p>
             </div>
         </div>
 
 
-        <div class="container py-5">
-            <h3 class="td">Sản Phẩm</h3>
-            <div class="row row-cols-1 row-cols-lg-4 g-4" id="products">
-            </div>
-        </div>
-    </main>
 
-    <footer>
-        <div>
-            Bản quyền bởi &copy; Nguyễn Minh Phúc-Nguyễn Thanh Hiếu &copy; 2023
-        </div>
+        <!-- / -->
+        <script>
+            window.addEventListener("offline", () => alert("Hãy kết nối internet."))
+            window.onload = function () {
+                showAlert();
+            };
 
-    </footer>
 
-    <script>
-        window.addEventListener("offline", () => alert("Hãy kết nối internet."))
-        window.onload = function () {
-            showAlert();
-        };
 
-        function showAlert() {
-            alert("Đồ án Thiết Kế Web Nguyễn Minh Phúc-Nguyễn Thanh Hiếu");
-        }
+            const toggleToggleSidebar = () => {
+                const sidebar = document.getElementById("mobile-sidebar")
+                const hidden = sidebar.classList.contains("d-none")
+                sidebar.classList.toggle("d-none", !hidden)
+            }
 
-        const toggleToggleSidebar = () => {
-            const sidebar = document.getElementById("mobile-sidebar")
-            const hidden = sidebar.classList.contains("d-none")
-            sidebar.classList.toggle("d-none", !hidden)
-        }
+            document.getElementById("toggle-sidebar").addEventListener("click", toggleToggleSidebar)
+            document.getElementById("mobile-sidebar").addEventListener("click", toggleToggleSidebar) 
+        </script>
 
-        document.getElementById("toggle-sidebar").addEventListener("click", toggleToggleSidebar)
-        document.getElementById("mobile-sidebar").addEventListener("click", toggleToggleSidebar) 
-    </script>
-
-    <script src="./assets/js/main.js"></script>
+        <script src="./assets/js/main.js"></script>
 </body>
 
 </html>
