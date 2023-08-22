@@ -94,10 +94,7 @@ const products = [
         image: "./assets/images/anh16.jpg",
         code: "795812",
         price: "300.000 đ"
-    },
-
-
-
+    }
 ]
 
 
@@ -148,10 +145,13 @@ const renderProduct = (product) => {
     `
 }
 
+
 const renderCart = () => {
     const items = JSON.parse(localStorage.getItem("cart"))
 
     if (!Array.isArray(items) || items.length === 0) {
+        document.getElementById("cart-items").innerHTML = "Không có sản phẩm nào."
+        document.getElementById("cart-badge").innerHTML = ""
         return
     }
 
@@ -162,7 +162,7 @@ const renderCart = () => {
         </div>
     `
 
-    document.getElementById("cart-items").innerHTML = items.map(
+    const elements = items.map(
         product => `
             <li>
                 <div class="d-flex gap-2 py-1 px-2">
@@ -174,7 +174,26 @@ const renderCart = () => {
                 </div>
             </li>
         `
-    ).join("")
+    )
+
+    if (elements.length > 0) {
+        elements.push(
+            `
+                <button type="button" id="remove-cart" class="d-block mx-auto mt-4 btn btn-danger">Xoá Giỏ Hàng</button>
+            `
+        )
+
+        document.getElementById("cart-items").innerHTML = elements.join("")
+        document.getElementById("remove-cart").addEventListener(
+            "click",
+            () => {
+                localStorage.removeItem("cart")
+                renderCart()
+            }
+        )
+        return
+    }
+
 }
 
 
