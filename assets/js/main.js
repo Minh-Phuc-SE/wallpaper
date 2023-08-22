@@ -150,7 +150,7 @@ const renderCart = () => {
     const items = JSON.parse(localStorage.getItem("cart"))
 
     if (!Array.isArray(items) || items.length === 0) {
-        document.getElementById("cart-items").innerHTML = "Không có sản phẩm nào."
+        document.getElementById("cart-items").innerHTML = `<p style="text-align: center; margin: 0;">Chưa có sản phẩm nào!</p>`
         document.getElementById("cart-badge").innerHTML = ""
         return
     }
